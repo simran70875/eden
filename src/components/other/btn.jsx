@@ -5,7 +5,7 @@ const Btn = ({ children, href = "#", rightIcon, padding, className, background, 
   return (
     <a style={{
       color: color ? color : "#fff",
-      padding: padding ? padding : "0 1rem",
+      padding: padding ? padding : "0px 0.6vw",
       background: background ? background : "linear-gradient(86.2deg, #2F98D0 8.59%, #47ADE3 89.8%)"
     }} className={`${className} webBtn`} href={href} role="button">
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Btn from './btn';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Add icons
+import { FaBars } from 'react-icons/fa'; // Add icons
 import images from '../theme/imagesPath';
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
         {/* Keep navItems only on desktop */}
         {['Home', 'Services', 'Clients', 'Packages', 'About', 'Contact Us'].map((item, i) => (
           <div className="navItem" key={i}>
-            <a href="#" className="navItem">{item}</a>
+            <a href="#">{item}</a>
           </div>
         ))}
       </div>

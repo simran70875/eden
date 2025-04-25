@@ -6,13 +6,14 @@ import images from './components/theme/imagesPath';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CSSPlugin } from "gsap/CSSPlugin";
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import {
   FaFacebookF,
   FaLinkedinIn,
   FaXTwitter,
   FaInstagram
 } from "react-icons/fa6";
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger, CSSPlugin);
 
@@ -56,7 +57,7 @@ function App() {
   const component = useRef();
   const slider = useRef();
 
-  useLayoutEffect(() => {
+  useGSAP(() => {
     console.log("window.innerWidth ==>", window.innerWidth);
     if (window.innerWidth <= 768) return;
     const ctx = gsap.context(() => {
@@ -86,7 +87,7 @@ function App() {
         tl.to(panel, {
           width: "14.2vw",
           duration: 1,
-          ease: "power2.inOut"
+          ease: "none"
         });
 
         // Hide content
@@ -94,6 +95,8 @@ function App() {
           opacity: 0,
           overflow: "hidden",
           duration: 0.5,
+          // delay:1,
+          // width:"100%",
           ease: "power2.inOut"
         }, "<");
 
@@ -110,7 +113,7 @@ function App() {
     return () => ctx.revert();
   }, []);
 
-  useLayoutEffect(() => {
+  useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: wrapperRef.current,

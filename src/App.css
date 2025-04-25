@@ -50,7 +50,8 @@ body {
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
+  color: #000;
 }
 
 
@@ -65,12 +66,12 @@ a {
 }
 
 #header {
-  padding: 1rem;
+  padding: 0 1rem;
   background-color: rgb(255 255 255 / 40%);
   backdrop-filter: blur(20px);
   border-radius: 2.5rem;
   width: 80vw;
-  height: 8vh;
+  height: 7vh;
   position: relative;
   z-index: 999;
   margin-right: 4rem;
@@ -86,7 +87,7 @@ a {
 }
 
 #header .navItem {
-  color: var(--white);
+  color: var(--white) !important;
   width: 7.5vw;
   display: flex;
   align-items: center;
@@ -95,11 +96,15 @@ a {
   font-weight: 400;
 }
 
+#header .navItem a {
+  color: var(--white);
+}
 
 #header .navItem:hover,
 #header .navItem:active {
   background: linear-gradient(86.2deg, var(--primary) 8.59%, var(--primary2) 89.8%);
   border-radius: 3rem;
+  padding: 0.5vw;
 }
 
 
@@ -755,7 +760,6 @@ a {
 
 }
 
-
 .box-content {
   margin-top: 1rem;
   width: 20%;
@@ -767,6 +771,25 @@ a {
 .box-content .long-content {
   font-size: 0.8vw;
 }
+
+
+
+.box-content .box-btn .webBtn {
+  height: 4vh;
+}
+
+
+.webBtn:hover {
+  background-color: var(--dark);
+}
+
+/* Icon span on the right */
+.box-content .box-btn .webBtn .btn-icon {
+  height: 1.5vw;
+  width: 1.5vw;
+  margin-left: 0.7vw;
+}
+
 
 #pattern {
   position: absolute;
