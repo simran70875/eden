@@ -177,7 +177,9 @@ function App() {
         <div ref={contentRef} className="box-content">
           <p className='long-content' style={{ color: boxBgColors[index % boxBgColors.length] === "#fafafa" ? "#828282" : "#fff" }}>{content}</p>
           <div className="box-btn">
-            <Btn iconbackground={boxBgColors[index % boxBgColors.length] === "#8DC74B" ? '#8DC74B' : boxBgColors[index % boxBgColors.length] === "#2F98D0" ? '#2F98D0' : '#fff'} color={boxBgColors[index % boxBgColors.length] === "#8DC74B" ? '#8DC74B' : boxBgColors[index % boxBgColors.length] === "#2F98D0" ? '#2F98D0' : '#fff'} background={boxBgColors[index % boxBgColors.length] === "#fafafa" ? "linear-gradient(86.2deg, #2F98D0 8.59%, #47ADE3 89.8%)" : "linear-gradient(86.2deg,#ffffff 8.59%, #ffffff 89.8%)"} rightIcon>Learn More</Btn>
+            {/* <Btn iconbackground={boxBgColors[index % boxBgColors.length] === "#8DC74B" ? '#8DC74B' : boxBgColors[index % boxBgColors.length] === "#2F98D0" ? '#2F98D0' : '#fff'} color={boxBgColors[index % boxBgColors.length] === "#8DC74B" ? '#8DC74B' : boxBgColors[index % boxBgColors.length] === "#2F98D0" ? '#2F98D0' : '#fff'} background={boxBgColors[index % boxBgColors.length] === "#fafafa" ? "linear-gradient(86.2deg, #2F98D0 8.59%, #47ADE3 89.8%)" : "linear-gradient(86.2deg,#ffffff 8.59%, #ffffff 89.8%)"} rightIcon>Learn More</Btn> */}
+
+            <Btn rightIcon>Learn More</Btn>
           </div>
 
         </div>
