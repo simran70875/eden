@@ -10,7 +10,7 @@ const Btn = ({ children, href = "#", rightIcon, padding, className, background, 
     }} className={`${className} webBtn`} href={href} role="button">
 
 
-      
+
       {children}
       {
         rightIcon && <span style={{ backgroundColor: iconbackground ? iconbackground : "#fff" }} className="btn-icon">
