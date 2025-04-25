@@ -2,16 +2,14 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CSSPlugin } from "gsap/CSSPlugin";
 import { useRef, useState } from 'react';
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaXTwitter,
-  FaInstagram
-} from "react-icons/fa6";
+
 import { useGSAP } from '@gsap/react';
 import Btn from "../components/other/btn";
 import Header from "../components/other/header";
 import images from "../components/theme/imagesPath";
+import Footer from "../components/other/footer";
+import Features from "../components/pages/features";
+import Brands from "../components/pages/brands";
 
 gsap.registerPlugin(ScrollTrigger, CSSPlugin);
 
@@ -22,14 +20,7 @@ const LandingPage = () => {
   const lineRef = useRef(null);
   // const iconRef = useRef(null);
 
-  const brands = [
-    images.brand1,
-    images.brand2,
-    images.brand3,
-    images.brand4,
-    images.brand5,
-    images.brand6,
-  ];
+
 
   const data = [
     { title: "Eden Strategy", content: "Lorem ipsum dolor sit amet consectetur. Convallis just in cursus consectetur. Felis dictumst rutrum et facilisi commodo nec netus." },
@@ -40,25 +31,12 @@ const LandingPage = () => {
     { title: "Eden Strategy", content: "Lorem ipsum dolor sit amet consectetur. Convallis just in cursus consectetur. Felis dictumst rutrum et facilisi commodo nec netus." },
   ];
 
-  const featuresData = [
-    { title: 80, content: "Suppliers Engaged", img: images.feature1 },
-    { title: 80, content: "Suppliers Engaged", img: images.feature2 },
-    { title: 80, content: "Suppliers Engaged", img: images.feature3 },
-    { title: 80, content: "Suppliers Engaged", img: images.feature4 },
-    { title: 80, content: "Suppliers Engaged", img: images.feature5 },
-    { title: 80, content: "Suppliers Engaged", img: images.feature1 },
-    { title: 80, content: "Suppliers Engaged", img: images.feature2 },
-    { title: 80, content: "Suppliers Engaged", img: images.feature3 },
-    { title: 80, content: "Suppliers Engaged", img: images.feature4 },
-    { title: 80, content: "Suppliers Engaged", img: images.feature5 },
-  ];
 
 
   const component = useRef();
   const slider = useRef();
 
   useGSAP(() => {
-    console.log("window.innerWidth ==>", window.innerWidth);
     if (window.innerWidth <= 768) return;
     const ctx = gsap.context(() => {
       const panels = gsap.utils.toArray(".expandable-box");
@@ -203,7 +181,7 @@ const LandingPage = () => {
         <div id="contentSection">
           <img src={images.logo} alt="logo" className="logo" />
           <h1 className='top-title'>Your sustainable <span>utility partner</span></h1>
-          <p className='long-content content-width'>Lorem ipsum dolor sit amet consectetur. Convallis just in cursus consectetur. Felis dictumst rutrum et facilisi commodo nec netus. </p>
+          <p className='long-content'>Lorem ipsum dolor sit amet consectetur. Convallis just in cursus consectetur. Felis dictumst rutrum et facilisi commodo nec netus. </p>
           <Btn rightIcon>Talk to an Expert</Btn>
           <img className="flowers" src={images.flowers} />
         </div>
@@ -258,10 +236,13 @@ const LandingPage = () => {
       <section id="about">
         <div id='about-row'>
           <div id="about-left">
-            <div id="about-title">
-              The mind <span><img src={images.infinity} alt="infinity" id="infinity-about" /></span>  <span id='behind'>Behind</span> <span id='eden'>eden</span>
+
+            <div id="contentSectionAbout">
+              <div id="about-title">
+                The mind <span><img src={images.infinity} alt="infinity" id="infinity-about" /></span>  <span id='behind'>Behind</span> <span id='eden'>eden</span>
+              </div>
+              <p className='long-content'>Mark’s experience has been the essential pillar in building Eden Utilities Products, whilst his ethos determined the company’s consultative approach on which we continue to build our reputation.</p>
             </div>
-            <p className='long-content'>Mark’s experience has been the essential pillar in building Eden Utilities Products, whilst his ethos determined the company’s consultative approach on which we continue to build our reputation.</p>
           </div>
           <div id="about-right">
             <div className="person-about-business">
@@ -299,17 +280,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="brands">
-        <div className="title">BRANDS WHO TRUST <span className='eden-highlight'>EDEN</span></div>
-        <div className="brands-track">
-          <div className="brands-slide">
-            {brands.concat(brands).map((logo, index) => (
-              <img src={logo} alt={`Brand ${index}`} key={index} className="brand-logo" />
-            ))}
-          </div>
-        </div>
-        <Btn rightIcon>See how eden Works</Btn>
-      </section>
+      <Brands btn />
 
       <section id="services" ref={component}>
         <div id="services-header">
@@ -356,98 +327,9 @@ const LandingPage = () => {
         <img alt="side-leaves" className='side-leaves2' src={images.side_leaves2} />
       </div>
 
+      <Features />
 
-      <section id="features">
-        <div className="brands-track">
-          <div className="brands-slide">
-            {featuresData?.map((feature, index) => (
-              <div key={index} className="supplier-card" style={{ backgroundImage: `url(${feature.img})`, }}>
-                <div className="overlay"></div>
-                <div className="supplier-percentage">{feature.title}%</div>
-                <div className="supplier-label">{feature.content}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <footer className="footer-container">
-        <div className='custom-footer'>
-          <div className="footer-col">
-            <div>
-              <img src={images.logo} alt="logo" className="logo" />
-              <p className="footer-text">Eden Utilities offers innovative and sustainable utility management solutions, specialising in energy optimisation and renewable energy. We help businesses reduce costs, improve efficiency, and support a greener future.</p>
-            </div>
-
-          </div>
-
-          <div className="footer-col">
-            <h4 className="footer-heading">Quick Links</h4>
-            <ul className="footer-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Eden Partnership</a></li>
-              <li><a href="#">Client</a></li>
-              <li><a href="#">Packages</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-
-          <div className="footer-col">
-            <h4 className="footer-heading">Address</h4>
-            <div className='footer-row'>
-              <img className="search-icon" src={images.subway_location} />
-              <p className="footer-address">
-                123 Green Lane<br />
-                Sustainable City, EC01 9XX<br />
-                United Kingdom
-              </p>
-            </div>
-
-          </div>
-
-          <div className="footer-col">
-            <h4 className="footer-heading">Contact Me</h4>
-
-            <div>
-              <div className='footer-row'>
-                <img className="search-icon" src={images.line_md_phone} />
-                <p className="footer-contact">+44 123 456 7890</p>
-              </div>
-              <div style={{ padding: "0.5rem" }}></div>
-              <div className='footer-row'>
-
-                <img className="search-icon" src={images.ic_outline_email} />
-                <p className="footer-contact">info@edenutilities.com</p>
-              </div>
-            </div>
-
-
-
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p className="copyright">
-            © 2025. All Rights Reserved
-          </p>
-          <div className="socials">
-            <span className="follow-text">Follow Us:</span>
-            <a href="#" className="social-icon" aria-label="Facebook">
-              <FaFacebookF />
-            </a>
-            <a href="#" className="social-icon" aria-label="LinkedIn">
-              <FaLinkedinIn />
-            </a>
-            <a href="#" className="social-icon" aria-label="X (Twitter)">
-              <FaXTwitter />
-            </a>
-            <a href="#" className="social-icon" aria-label="Instagram">
-              <FaInstagram />
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
     </>
   )

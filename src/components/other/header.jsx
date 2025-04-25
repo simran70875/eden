@@ -3,20 +3,21 @@ import Btn from './btn';
 import { FaBars } from 'react-icons/fa'; // Add icons
 import images from '../theme/imagesPath';
 
-const Header = () => {
+const Header = ({headerStyle, navItemStyle}) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div id="header">
+    <div id="header" style={headerStyle}>
       <div className="mobile-logo">
         <img src={images.logo} alt="logo" />
       </div>
+
 
       <div className="navItems desktop-only">
         {/* Keep navItems only on desktop */}
         {['Home', 'Services', 'Clients', 'Packages', 'About', 'Contact Us'].map((item, i) => (
           <div className="navItem" key={i}>
-            <a href="#">{item}</a>
+            <a style={navItemStyle} href="#">{item}</a>
           </div>
         ))}
       </div>

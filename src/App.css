@@ -178,6 +178,7 @@ a {
   padding: 4vw;
   margin-bottom: 10rem;
   position: relative;
+  width: 40vw;
 }
 
 .top-title {
@@ -200,9 +201,7 @@ a {
   color: var(--textColor);
 }
 
-.content-width {
-  width: 42vw;
-}
+
 
 .long-content-medium {
   font-weight: 400;
@@ -476,6 +475,11 @@ a {
   padding: 0 5rem;
 }
 
+
+#contentSectionAbout{
+  width: 35vw;
+}
+
 #about-title {
   font-family: "Lato-bold";
   font-size: 5vw;
@@ -614,7 +618,7 @@ a {
 }
 
 .brand-logo {
-  height: 7vw;
+  height: 6vw;
   margin: 0 1vw;
   flex-shrink: 0;
   opacity: 1;
