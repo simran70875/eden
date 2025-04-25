@@ -110,7 +110,7 @@ function App() {
     return () => ctx.revert();
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: wrapperRef.current,

@@ -118,7 +118,7 @@ a {
   align-items: center;
   justify-content: center;
   padding: 0 1rem;
-  font-size: 1vw;
+  font-size: 0.8vw;
   font-weight: 400;
   text-transform: capitalize;
 }
@@ -129,7 +129,7 @@ a {
 
 /* Icon span on the right */
 .btn-icon {
-  border-radius: 1rem;
+  border-radius: 1vw;
   height: 2vw;
   width: 2vw;
   background-size: contain;
