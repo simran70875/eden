@@ -40,7 +40,27 @@ import feature3 from '../../assets/landing/features/3.jpg';
 import feature4 from '../../assets/landing/features/4.jpg';
 import feature5 from '../../assets/landing/features/5.jpg';
 
+//insights
+import post1 from '../../assets/insights/2.png';
+import post2 from '../../assets/insights/4.png';
+import post3 from '../../assets/insights/2.png';
+import post4 from '../../assets/insights/4.png';
+import post5 from '../../assets/insights/2.png';
+import tree_insight from '../../assets/insights/tree.png';
+import profile from '../../assets/insights/profile.webp';
+import profile2 from '../../assets/insights/profile2.jpg';
+import blog_single from '../../assets/insights/5.png';
+import grass from '../../assets/insights/6.png';
 
+//contact 
+import checked from '../../assets/insights/check.png';
+
+
+//about
+import writtenImg from '../../assets/about/write.png';
+import lines from '../../assets/about/lines.png';
+import outer_video_image from '../../assets/about/5.png';
+import inner_video_image from '../../assets/about/4.png';
 
 const images = {
     logo,
@@ -77,7 +97,22 @@ const images = {
     feature5,
     line_md_phone,
     ic_outline_email,
-    subway_location
-};
+    subway_location,
+    post1,
+    post2,
+    post3,
+    post4,
+    post5,
+    tree_insight,
+    profile,
+    blog_single,
+    profile2,
+    grass,
+    checked,
+    writtenImg,
+    lines,
+    outer_video_image,
+    inner_video_image
+}
 
 export default images;
