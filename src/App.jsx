@@ -13,10 +13,10 @@ import LandingPage from "./screens/landing";
 import Insights from "./screens/insights";
 import { ModalProvider, useModal } from "./components/pages/ModalContext";
 import ContactModal from "./screens/ContactModal";
-import useLenisScrollLock from "./hooks/useLenisScrollLock";
 import About from "./screens/about";
 
-const ScrollManager = ({ children, lenisRef }) => {
+const ScrollManager = ({ children }) => {
+  const lenisRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -48,25 +48,18 @@ const ScrollManager = ({ children, lenisRef }) => {
   return <>{children}</>;
 };
 
-
 // Separate wrapper to access context inside modal
-const ContactModalWrapper = ({ lenisRef }) => {
+const ContactModalWrapper = () => {
   const { closeContactModal, isContactModalOpen } = useModal();
-
-  // Scroll lock hook
-  useLenisScrollLock(isContactModalOpen, lenisRef.current);
-
   return <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />;
 };
 
 
-
 const App = () => {
-  const lenisRef = useRef(null);
   return (
     <ModalProvider>
       <Router>
-        <ScrollManager lenisRef={lenisRef}>
+        <ScrollManager>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/insights" element={<Insights />} />
@@ -76,7 +69,7 @@ const App = () => {
       </Router>
 
       {/* Render once globally */}
-      <ContactModalWrapper lenisRef={lenisRef} />
+      <ContactModalWrapper />
     </ModalProvider>
   );
 };
