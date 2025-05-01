@@ -124,8 +124,9 @@ const About = () => {
                     </div>
                 </div>
 
-
+                <img src={images.shape} id='shape' alt="shape" />
                 <div id="video-section">
+
                     <img src={images.outer_video_image} alt="outer_video_image" className='outer-video-img' />
                     <img src={images.inner_video_image} alt="inner_video_image" className='inner-video-img img-fluid' />
                     <div id="play-btn">
@@ -134,6 +135,53 @@ const About = () => {
                 </div>
 
             </section>
+
+
+            <div id='partnership' className='container-fluid p-0'>
+                <div className="content-width px-4 px-md-4">
+                    <div className="title text-start">PARTNERSHIP WITH ALL CLIENTS
+                    </div>
+                    <p className="long-content text-start">Eden Utilities pride itself on working in
+                        partnership with all clients, to ensure that
+                        they are receiving not only the best price
+                        from their utilities suppliers, but also the
+                        best value
+                    </p>
+                    <p className="long-content text-blue pb-4">Read More..</p>
+                    <Btn rightIcon>Speak to an expert</Btn>
+                </div>
+
+                <div class="circle">
+                    <svg stroke="#2f98d0" stroke-width="0.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M0,100 A100,100 0 0,1 100,0 L100,100 Z" fill="white" />
+                    </svg>
+                </div>
+
+            </div>
+
+
+
+            <div id='csr' className='container-fluid p-0'>
+                {/* <div className="content-width px-4 px-md-4">
+                    <div className="title text-start">PARTNERSHIP WITH ALL CLIENTS
+                    </div>
+                    <p className="long-content text-start">Eden Utilities pride itself on working in
+                        partnership with all clients, to ensure that
+                        they are receiving not only the best price
+                        from their utilities suppliers, but also the
+                        best value
+                    </p>
+                    <p className="long-content text-blue pb-4">Read More..</p>
+                    <Btn rightIcon>Speak to an expert</Btn>
+                </div> */}
+
+                <div class="circle">
+                    <svg stroke="#2f98d0" stroke-width="0.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M0,100 A100,100 0 0,1 100,0 L100,100 Z" fill="white" />
+                    </svg>
+                </div>
+
+            </div>
 
 
         </div>

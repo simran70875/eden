@@ -92,7 +92,7 @@
 }
 
 #about-page-content {
-    height: 80vh;
+    height: 240vh;
     margin-top: 10vh;
     position: relative;
 }
@@ -119,7 +119,7 @@
     height: 54vw;
     width: 54vw;
     border-radius: 50%;
-    margin-top: -30vh;
+    margin-top: -28vh;
     margin-left: -10vw;
     border: 1px solid var(--primary);
     position: relative;
@@ -216,7 +216,7 @@
     position: absolute;
     right: 10vw;
     z-index: 4;
-    bottom: -78vh;
+    top: 70vh;
     padding-bottom: 0;
 }
 
@@ -248,7 +248,7 @@
     height: 56vh;
     z-index: 3;
     width: 40%;
-    left: 38vw;
+    left: 45vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -266,4 +266,94 @@
 
 #features3 p {
     font-size: 10px;
+}
+
+
+#shape {
+    position: absolute;
+    top: 122.4vh;
+    height: 205px;
+    width: auto;
+    left: 39.8vw;
+    z-index: 3;
+}
+
+
+#partnership {
+    height: 80vh;
+    background-image: url('../../assets/about/6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+#partnership .circle {
+    width: 51vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: -19vh;
+}
+
+#partnership .circle svg {
+    width: 100%;
+    height: 100%;
+}
+
+#partnership .content-width {
+    width: 30%;
+    z-index: 4;
+    margin-right: 6vw;
+}
+
+.text-blue {
+    color: var(--primary);
+    font-size: 14px;
+    font-family: "Lato-Bold";
+}
+
+
+
+#csr {
+    height: 80vh;
+    background-image: url('../../assets/about/7.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+#csr .circle {
+    width: 51vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: -19vh;
+}
+
+#csr .circle svg {
+    width: 100%;
+    height: 100%;
+}
+
+#csr .content-width {
+    width: 30%;
+    z-index: 4;
+    margin-right: 6vw;
+}
+
+.text-blue {
+    color: var(--primary);
+    font-size: 14px;
+    font-family: "Lato-Bold";
 }

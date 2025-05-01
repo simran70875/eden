@@ -61,6 +61,7 @@ import writtenImg from '../../assets/about/write.png';
 import lines from '../../assets/about/lines.png';
 import outer_video_image from '../../assets/about/5.png';
 import inner_video_image from '../../assets/about/4.png';
+import shape from '../../assets/about/shape.png';
 
 const images = {
     logo,
@@ -112,7 +113,8 @@ const images = {
     writtenImg,
     lines,
     outer_video_image,
-    inner_video_image
+    inner_video_image,
+    shape
 }
 
 export default images;
