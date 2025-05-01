@@ -5,38 +5,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import images from "../components/theme/imagesPath";
 
-const testimonials = [
-    {
-        image: images.profile2,
-        name: "Liza Williams",
-        role: "CMO",
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    },
-    {
-        image: images.profile2,
-        name: "John Doe",
-        role: "CTO",
-        text: "It has survived not only five centuries, but also the leap into electronic typesetting.",
-    },
-    {
-        image: images.profile2,
-        name: "Emma Brown",
-        role: "Marketing Head",
-        text: "Remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets.",
-    },
-    {
-        image: images.profile2,
-        name: "Oliver Smith",
-        role: "Designer",
-        text: "More recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    },
-    {
-        image: images.profile2,
-        name: "Sophia Johnson",
-        role: "Product Manager",
-        text: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-    },
-];
 
 
 export default function TestimonialsSection() {
