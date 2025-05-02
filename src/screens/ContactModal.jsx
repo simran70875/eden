@@ -20,7 +20,6 @@ const ContactModal = ({ isOpen, onClose }) => {
         { title: "Step 4", content: "Review & Submit" },
     ];
 
-
     const [selectedOptions, setSelectedOptions] = useState([]);
 
     const options = [

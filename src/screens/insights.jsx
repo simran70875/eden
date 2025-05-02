@@ -147,12 +147,12 @@ const LatestblogPosts = [
     content: "Hydrogen is emerging as a key player in the clean energy transition, promising lower emissions for transportation.",
     image: images.post3,
   },
-  {
-    id: 4,
-    title: "Community Solar Projects Empower Local Areas",
-    content: "Shared solar installations are helping small communities benefit from renewable energy without high upfront costs.",
-    image: images.post2,
-  },
+  // {
+  //   id: 4,
+  //   title: "Community Solar Projects Empower Local Areas",
+  //   content: "Shared solar installations are helping small communities benefit from renewable energy without high upfront costs.",
+  //   image: images.post2,
+  // },
 
 ];
 

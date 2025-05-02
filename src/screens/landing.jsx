@@ -1,8 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CSSPlugin } from "gsap/CSSPlugin";
-import { useEffect, useRef, useState } from "react";
-
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import Btn from "../components/other/btn";
 import Header from "../components/other/header";
@@ -83,14 +82,10 @@ const LandingPage = () => {
             pin: true,
             endTrigger: "#contact",
             onLeave: () => {
-              document
-                .getElementById("services-header")
-                ?.classList.add("scroll-ended");
+              document.getElementById("services-header")?.classList.add("scroll-ended");
             },
             onEnterBack: () => {
-              document
-                .getElementById("services-header")
-                ?.classList.remove("scroll-ended");
+              document.getElementById("services-header")?.classList.remove("scroll-ended");
             },
           },
         });
@@ -120,9 +115,6 @@ const LandingPage = () => {
             "<"
           );
 
-          // tl.to(title, {
-          //   fontSize: "1.2vw"
-          // })
 
           timeline.add(tl, i);
         });
@@ -270,8 +262,6 @@ const LandingPage = () => {
   //   //   }
   //   // );
   // }, []);
-
-
 
   const { openContactModal } = useModal();
   return (

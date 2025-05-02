@@ -62,6 +62,10 @@ import lines from '../../assets/about/lines.png';
 import outer_video_image from '../../assets/about/5.png';
 import inner_video_image from '../../assets/about/4.png';
 import shape from '../../assets/about/shape.png';
+import secure from '../../assets/about/secure.png';
+import leaf2 from '../../assets/about/8.png';
+import person from '../../assets/about/10.png';
+import tree from '../../assets/about/9.png';
 
 const images = {
     logo,
@@ -114,7 +118,11 @@ const images = {
     lines,
     outer_video_image,
     inner_video_image,
-    shape
+    shape,
+    secure,
+    leaf2,
+    person,
+    tree
 }
 
 export default images;

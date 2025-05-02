@@ -713,9 +713,9 @@ a {
   transition: all 0.3s ease;
 }
 
-#services-header.scroll-ended {
+/* #services-header.scroll-ended {
   position: relative;
-}
+} */
 
 .side-leaves {
   position: absolute;
