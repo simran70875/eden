@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CSSPlugin } from "gsap/CSSPlugin";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import Btn from "../components/other/btn";
 import Header from "../components/other/header";
@@ -11,6 +11,8 @@ import Features from "../components/pages/features";
 import Brands from "../components/pages/brands";
 import "../responsive.css";
 import { useModal } from "../components/pages/ModalContext";
+import { FaSearch, FaTimes } from "react-icons/fa";
+import SearchBar from "./searchBar";
 
 gsap.registerPlugin(ScrollTrigger, CSSPlugin);
 
@@ -18,44 +20,143 @@ const LandingPage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const wrapperRef = useRef(null);
   const lineRef = useRef(null);
-  // const iconRef = useRef(null);
+
+  const heroRef = useRef(null);
+  const aboutRef = useRef(null);
+
+  const infinityLogoRef = useRef(null);
+  const infinityAboutLogoRef = useRef(null);
+
+  const topTitleRef = useRef(null);
+  const longContentRef = useRef(null);
+  const flowersRef = useRef(null);
 
   const data = [
     {
-      title: "Eden Strategy",
+      title: "Eden Infinity",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Convallis just in cursus consectetur. Felis dictumst rutrum et facilisi commodo nec netus.",
+        "The world is changing — fast. Businesses and consumers are more aware than ever of the need for genuine sustainability. Expectations are rising, and responsibility is no longer optional. Many organisations are making changes — Eden Infinity helps take it further.",
     },
     {
       title: "Eden Strategy",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Convallis just in cursus consectetur. Felis dictumst rutrum et facilisi commodo nec netus.",
+        "With UK and global energy markets remaining volatile and unpredictable, effective energy management is more important than ever. At Eden, we work closely with you to.",
     },
     {
-      title: "Eden Strategy",
+      title: "Eden Auditing",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Convallis just in cursus consectetur. Felis dictumst rutrum et facilisi commodo nec netus.",
+        "Utility bills are often affected by complex tariffs and ever-changing regulations — and errors can easily go unnoticed. At Eden, we carry out independent audits to uncover undue charges and recover any credit owed.",
     },
     {
-      title: "Eden Strategy",
+      title: "Eden Procedurement",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Convallis just in cursus consectetur. Felis dictumst rutrum et facilisi commodo nec netus.",
+        "Energy suppliers across the UK offer a range of purchasing options — each with different terms, restrictions, and levels of flexibility. Navigating them isn’t always straightforward.",
     },
     {
-      title: "Eden Strategy",
+      title: "Eden Analytics",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Convallis just in cursus consectetur. Felis dictumst rutrum et facilisi commodo nec netus.",
+        "Clear, accurate reporting is key to understanding and managing your energy costs effectively. At Eden, we tailor reporting to suit your needs — from high-level insights to detailed data.",
     },
     {
-      title: "Eden Strategy",
+      title: "Eden Optimisation",
       content:
-        "Lorem ipsum dolor sit amet consectetur. Convallis just in cursus consectetur. Felis dictumst rutrum et facilisi commodo nec netus.",
+        "Our team helps ensure you're not overpaying for your energy. We optimise your current tariffs and charges while factoring in future consumption, protecting you from exceeding thresholds as your business grows.",
     },
   ];
 
   const component = useRef();
   const slider = useRef();
 
+  //hero section animation
+  useGSAP(() => {
+    // Animate all .slide-up-text elements with stagger (once)
+    const slideUpElements = gsap.utils.toArray(".slide-up-text");
+
+    // Create the GSAP timeline
+    const tl = gsap.timeline({
+      delay: 4, // Start the entire timeline after 3 seconds
+    });
+
+    // Slide-up animation with stagger
+    tl.fromTo(
+      slideUpElements,
+      { y: "100%", opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.2,
+      }
+    );
+    // Rotation animation for infinity logo on scroll
+    gsap.to(infinityLogoRef.current, {
+      rotation: 360,
+      scrollTrigger: {
+        trigger: heroRef.current,
+        start: "top bottom", // The trigger will start when the section is in view
+        end: "bottom top",
+        scrub: true, // Makes the animation scrub with the scroll
+      },
+    });
+  }, []);
+
+  //about section animation
+  useGSAP(
+    () => {
+      if (!infinityAboutLogoRef.current || !aboutRef.current) return;
+
+      // Animate all .slide-up-text elements with stagger (once)
+      const slideUpElements = gsap.utils.toArray(".slide-up-text");
+
+      gsap.fromTo(
+        slideUpElements,
+        { y: "100%", opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          // stagger: 0.4, // ⏱️ delay between each element
+          scrollTrigger: {
+            trigger: aboutRef.current,
+            start: "top 100%",
+          
+          },
+        }
+      );
+
+      // Logo rotation (can keep scrub or make once)
+      gsap.to(infinityAboutLogoRef.current, {
+        rotation: 360,
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+          // once: true, // optional: use only if you want one-time spin
+        },
+      });
+    },
+    { dependencies: [infinityAboutLogoRef, aboutRef] }
+  );
+
+  //line animation
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: wrapperRef.current,
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
+
+    // Line animation
+    tl.fromTo(lineRef.current, { height: 0 }, { height: "100%", ease: "none" });
+  }, []);
+
+  // sevices section animation
   useGSAP(() => {
     let screenWidth = window.innerWidth;
     let scrollStartValue = "top center";
@@ -82,10 +183,14 @@ const LandingPage = () => {
             pin: true,
             endTrigger: "#contact",
             onLeave: () => {
-              document.getElementById("services-header")?.classList.add("scroll-ended");
+              document
+                .getElementById("services-header")
+                ?.classList.add("scroll-ended");
             },
             onEnterBack: () => {
-              document.getElementById("services-header")?.classList.remove("scroll-ended");
+              document
+                .getElementById("services-header")
+                ?.classList.remove("scroll-ended");
             },
           },
         });
@@ -115,7 +220,6 @@ const LandingPage = () => {
             "<"
           );
 
-
           timeline.add(tl, i);
         });
       } else {
@@ -138,20 +242,6 @@ const LandingPage = () => {
     }, slider);
 
     return () => ctx.revert();
-  }, []);
-
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: wrapperRef.current,
-        start: "top center",
-        end: "bottom center",
-        scrub: true,
-      },
-    });
-
-    // Line animation
-    tl.fromTo(lineRef.current, { height: 0 }, { height: "100%", ease: "none" });
   }, []);
 
   const ExpandableServicesBox = ({ index, onClick, title, content }) => {
@@ -221,47 +311,66 @@ const LandingPage = () => {
     );
   };
 
-  // useEffect(() => {
-  //   // GSAP animation for the three dots
-  //   gsap.fromTo(
-  //     ".dot",
-  //     { y: 10 }, // Start with dots in normal position
-  //     {
-  //       y: 0, // Move the dots up by 10px
-  //       // repeat: 2, // Infinite repeat
-  //       duration: 0.3, // Duration for the bounce
-  //       stagger: {
-  //         amount: 0.3, // Stagger the animation for each dot
-  //         from: "start", // Start the stagger effect from the first dot
-  //       },
-  //       yoyo: true,
-  //       ease: "easeInOut", // Smooth easing for the animation
-  //       backgroundColor: "#8dc74b", // Change color as per your requirement
-  //       scrollTrigger: {
-  //         trigger: "#search", // Trigger the animation when the section comes into view
-  //         start: "top center", // Animation triggers when the top of the section hits the bottom of the viewport
-  //         end: "bottom top", // End the animation when the bottom of the section hits the top of the viewport
-  //         toggleActions: "play none none none", // Play animation when section is in view
-  //       },
-  //     }
-  //   );
+  //leaf animation
+  const leafRef = useRef(null);
+  const circleRef = useRef(null);
 
-  //   // Second animation for moving down (y: 0)
-  //   // gsap.fromTo(
-  //   //   ".dot",
-  //   //   { y: -10 }, // Start the dots from the up position
-  //   //   {
-  //   //     y: 0, // Move the dots back to the original position
-  //   //     repeat: -1, // Infinite repeat
-  //   //     duration: 0.6, // Duration for the bounce
-  //   //     stagger: {
-  //   //       amount: 0.3, // Stagger the animation for each dot
-  //   //       from: "start", // Start the stagger effect from the first dot
-  //   //     },
-  //   //     ease: "easeInOut", // Smooth easing for the animation
-  //   //   }
-  //   // );
-  // }, []);
+  const handleMouseMove = (e) => {
+    if (!leafRef.current || !circleRef.current) return;
+
+    const leaf = leafRef.current;
+    const circle = circleRef.current;
+
+    const { left, top, width, height } = leaf.getBoundingClientRect();
+    const mouseX = e.clientX - left;
+    const mouseY = e.clientY - top;
+
+    // Move glowing circle to cursor position
+    circle.style.left = `${mouseX}px`;
+    circle.style.top = `${mouseY}px`;
+    circle.style.opacity = 1;
+
+    // Calculate fast rotation
+    const rotateX = (mouseY / height - 0.5) * 60;
+    const rotateY = (mouseX / width - 0.5) * -60;
+
+    // Animate with GSAP
+    gsap.to(leaf, {
+      rotateX,
+      rotateY,
+      duration: 0.2,
+      ease: "power3.out",
+      transformPerspective: 800,
+      transformOrigin: "center center",
+    });
+  };
+
+  const handleMouseLeave = () => {
+    if (!leafRef.current || !circleRef.current) return;
+
+    // Reset rotation and hide circle
+    gsap.to(leafRef.current, {
+      rotateX: 0,
+      rotateY: 0,
+      duration: 0.3,
+      ease: "power2.out",
+    });
+
+    circleRef.current.style.opacity = 0;
+  };
+
+  useEffect(() => {
+    const leaf = leafRef.current;
+    if (!leaf) return;
+
+    leaf.addEventListener("mousemove", handleMouseMove);
+    leaf.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      leaf.removeEventListener("mousemove", handleMouseMove);
+      leaf.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
 
   const { openContactModal } = useModal();
   return (
@@ -270,127 +379,107 @@ const LandingPage = () => {
         <Header />
       </div>
 
-      <section id="hero">
+      <section id="hero" ref={heroRef}>
         <img
           src={images.infinity_logo_transparent}
           alt="infinity_logo_transparent"
           id="infinity-logo-transparent"
+          ref={infinityLogoRef}
         />
+
         <div id="contentSection">
-          <img src={images.logo} alt="logo" className="logo" />
-          <h1 className="top-title">
-            Your sustainable <span>utility partner</span>
-          </h1>
-          <p className="long-content">
-            Lorem ipsum dolor sit amet consectetur. Convallis just in cursus
-            consectetur. Felis dictumst rutrum et facilisi commodo nec netus.{" "}
-          </p>
-          <Btn onClick={openContactModal} rightIcon>Talk to an Expert</Btn>
-          <img className="flowers" src={images.flowers} />
+          <div className="slide-up">
+            <img src={images.logo} alt="logo" className="logo slide-up-text" />
+          </div>
+          <div className="slide-up">
+            <h1 className="top-title slide-up-text" ref={topTitleRef}>
+              Your sustainable <span>utility partner</span>
+            </h1>
+          </div>
+
+          <div className="slide-up">
+            <p className="long-content slide-up-text" ref={longContentRef}>
+              Driving smarter, greener utility strategies through expert
+              procurement, data-led insight, and flexible support tailored to
+              your operational and sustainability goals.
+            </p>
+          </div>
+
+          <div className="slide-up slide-up-text">
+            <Btn className="webBtn" onClick={openContactModal} rightIcon>
+              Talk to an Expert
+            </Btn>
+          </div>
+          <img className="flowers" src={images.flowers} ref={flowersRef} />
         </div>
       </section>
 
-      <section id="search">
-        <div className="search-container">
-          <img
-            className="search-icon"
-            src={images.icon_search}
-            alt="Search Icon"
-          />
+      <SearchBar />
 
-          <input
-            type="text"
-            className="search-input"
-            placeholder="The Best Utility Experts Near Me..."
-          />
-
-          {/* <div className="dots">
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-          </div> */}
-        </div>
-      </section>
-
-      <section id="edenText">
-        <h1 className="edenText-title">
-          <span className="w-wrapper">
-            <span className="w-letter">W</span>e{" "}
-            <span className="a-wrapper">
-              <span className="a-letter">a</span>re
-            </span>{" "}
-            <span className="eden-highlight">
-              <span className="d-wrapper">
-                E<span className="d-letter">d</span>en.
-              </span>
-            </span>
-          </span>
-        </h1>
-        <p className="edenText-subtext">
-          LOWER COST - MORE EFFICIENT - BETTER INFORMED
-        </p>
-
-        {/* Scroll Animation Wrapper */}
-        <div ref={wrapperRef} className="line-wrapper">
-          {/* Vertical Line */}
-          <div className="line" ref={lineRef} style={{}} />
-
-          {/* Icon in center of line */}
-          {/* <div
-            ref={iconRef}
-            className='lineIcon'>
-            {"<>"}
-          </div> */}
-        </div>
-      </section>
-
-      <div className="leaf">
+      <div className="leaf" ref={leafRef}>
         <img alt="leaf" src={images.leaf} />
+        <div className="glowing-circle" ref={circleRef}></div>{" "}
+        {/* Glowing circle element */}
       </div>
 
-      <section id="about">
+      <section id="about" ref={aboutRef}>
         <div id="about-row">
           <div id="about-left">
             <div id="contentSectionAbout">
-              <div id="about-title">
-                The mind{" "}
-                <span>
-                  <img
-                    src={images.infinity}
-                    alt="infinity"
-                    id="infinity-about"
-                  />
-                </span>{" "}
-                <span id="behind">Behind</span> <span id="eden">eden</span>
+              <div className="slide-up">
+                <div id="about-title" className="slide-up-text">
+                  The mind{" "}
+                  <span>
+                    <img
+                      src={images.infinity}
+                      alt="infinity"
+                      id="infinity-about"
+                    />
+                  </span>{" "}
+                  <span id="behind">Behind</span> <span id="eden">eden</span>
+                </div>
               </div>
-              <p className="long-content">
-                Mark’s experience has been the essential pillar in building Eden
-                Utilities Products, whilst his ethos determined the company’s
-                consultative approach on which we continue to build our
-                reputation.
-              </p>
+              <div className="slide-up">
+                <p className="long-content slide-up-text">
+                  Mark’s expertise has shaped Eden Utilities from the ground up,
+                  embedding a consultative and sustainability-first ethos into
+                  the company’s foundation. Deeply aware of the changing energy
+                  landscape, he understands the growing need for trusted,
+                  future-focused advisory. This mindset is central not just to
+                  Eden’s services, but to every team member he brings on board —
+                  creating a company united by shared values and a long-term
+                  vision for smarter, greener utilities
+                </p>
+              </div>
             </div>
           </div>
           <div id="about-right">
             <div className="person-about-business">
-              <p className="long-content-medium">
-                With 25+ years’ experience in the utilities industry, I believe
-                in a professional, ey friendly approach, delivering high quality
-                services in consultancy format.
-              </p>
+              <div className="slide-up">
+                <p className="long-content-medium slide-up-text">
+                  With over 30 years in the utilities industry, I believe in
+                  honest, expert advice delivered with a personable approach,
+                  focused on long-term value and sustainable solutions
+                </p>
+              </div>
               <img className="view" src={images.view} />
               <img className="viewBottom" src={images.viewBottom} />
             </div>
             <div className="person-info">
               <img className="founder" alt="founder" src={images.founder} />
-              <p className="name">Mark chipol</p>
-              <p className="designation">Founder & MD</p>
+              <div className="slide-up">
+                <p className="name slide-up-text">Mark chipol</p>
+              </div>
+              <div className="slide-up">
+                <p className="designation slide-up-text">Founder & MD</p>
+              </div>
             </div>
           </div>
           <img
             src={images.infinity_logo_transparent}
             alt="infinity_logo_transparent"
             id="infinity-logo-transparent-about"
+            ref={infinityAboutLogoRef}
           />
         </div>
 

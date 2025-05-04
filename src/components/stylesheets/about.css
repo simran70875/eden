@@ -170,12 +170,11 @@
     height: 54vw;
     width: 54vw;
     border-radius: 50%;
-    margin-top: -12vh;
     border: 1px solid var(--primary);
     position: absolute;
     right: 12vw;
     background: #fff;
-    top: 134vh;
+    top: 125vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -409,7 +408,6 @@
     bottom: 12vw;
     width: 14vw;
     left: -18px;
-    opacity: 0.7;
 }
 
 .title2 {

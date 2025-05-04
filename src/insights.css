@@ -1,695 +1,792 @@
 :root {
-    --primary: #2f98d0;
-    /* Blue */
-    --primary2: #47ade3;
-    --secondary: #8dc74b;
-    /* Green */
-    --success: #4caf50;
-    /* Green */
-    --danger: #f44336;
-    /* Red */
-    --warning: #ffc107;
-    /* Amber */
-    --info: #00bcd4;
-    /* Cyan */
-    --light: #f8f9fa;
-    /* Light gray */
-    --dark: #343a40;
-    /* Dark gray */
-    --white: #ffffff;
-    --black: #000000;
-    --gray: #6c757d;
-    --background: #f5f5f5;
-    --textColor: #828282;
-    --titleColor: #354158;
-}
-
-
-@font-face {
-    font-family: "Lato-Regular";
-    src: url("./assets/fonts/Lato-Regular.ttf");
+  --primary: #2f98d0;
+  /* Blue */
+  --primary2: #47ade3;
+  --secondary: #8dc74b;
+  /* Green */
+  --success: #4caf50;
+  /* Green */
+  --danger: #f44336;
+  /* Red */
+  --warning: #ffc107;
+  /* Amber */
+  --info: #00bcd4;
+  /* Cyan */
+  --light: #f8f9fa;
+  /* Light gray */
+  --dark: #343a40;
+  /* Dark gray */
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #6c757d;
+  --background: #f5f5f5;
+  --textColor: #828282;
+  --titleColor: #354158;
 }
 
 @font-face {
-    font-family: "Lato-bold";
-    src: url("./assets/fonts/Lato-Bold.ttf");
+  font-family: "Lato-Regular";
+  src: url("./assets/fonts/Lato-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Lato-bold";
+  src: url("./assets/fonts/Lato-Bold.ttf");
+}
 
 #insights-header {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 1em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 
 #insights-header .logo {
-    width: auto;
-    z-index: 1;
-    position: relative;
-    height: 2vw;
+  width: auto;
+  z-index: 1;
+  position: relative;
+  height: 2vw;
 }
 
 #hero-blog {
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-        url("/src/assets/insights/heroBlog.png");
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: cover;
-    min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+    url("/src/assets/insights/heroBlog.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  min-height: 100vh;
 }
-
 
 #insights .edenText-title {
-    font-size: clamp(2.3rem, 6.6vw, 7rem);
+  font-size: clamp(2.3rem, 5.5vw, 7rem);
 }
 
-
-
-
 #insights .edenText-subtext {
-    font-size: clamp(1rem, 2.5vw, 1rem);
+  font-size: clamp(1rem, 2.5vw, 1rem);
 }
 
 .h-70vh {
-    height: 60vh;
+  height: 60vh;
 }
 
 .btn-hero {
-    z-index: 999;
+  z-index: 999;
 }
 
 #insights .w-letter::after {
-    width: 16px;
-    height: 16px;
-    left: 1.2vw;
+  width: 16px;
+  height: 16px;
+  left: 1.2vw;
 }
 
 #insights .a-letter::before {
-    width: 16px;
-    height: 16px;
-    left: 1vw;
-    top: 1.5vw;
+  width: 16px;
+  height: 16px;
+  left: 1vw;
+  top: 1.5vw;
 }
 
 #insights .d-letter::before {
-    width: 16px;
-    height: 16px;
-    left: 2vw;
-    top: 0px;
+  width: 16px;
+  height: 16px;
+  left: 2vw;
+  top: 0px;
 }
-
 
 #insights .d-letter::after {
-    left: -5vw;
-    top: -69px;
+  left: -5vw;
+  top: -69px;
 }
 
-
-
-
-
 .top-curve {
-    position: relative;
-    overflow: hidden;
-    height: 80vh;
-    background: #ffffff00;
-    top: 0;
-    width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  background: #ffffff00;
+  top: 0;
+  width: 100%;
 }
 
 .top-curve-svg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
-
 .hero-insight {
-    position: absolute;
-    padding: 2em 10em;
-    bottom: 0;
+  position: absolute;
+  padding: 2em 10em;
+  bottom: 0;
 }
 
 #insights .hero-insight #about-title {
-    font-size: 4vw;
+  font-size: 4vw;
 }
-
 
 #insights .hero-insight #about-title,
 #insights .hero-insight .long-content,
 #insights .hero-insight .box-title {
-    color: #fff;
+  color: #fff;
 }
 
 #insights .hero-insight .box-title {
-    text-transform: capitalize;
-    font-size: 1.5vw;
+  text-transform: capitalize;
+  font-size: 1.5vw;
 }
 
 #insights .hero-insight .long-content {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 #swiper-insights {
-    background: linear-gradient(86.2deg,
-            var(--primary) 8.59%,
-            var(--primary2) 89.8%);
-    border-radius: 20px;
-    position: relative;
-    z-index: 1;
+  background: linear-gradient(
+    86.2deg,
+    var(--primary) 8.59%,
+    var(--primary2) 89.8%
+  );
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 #swiper-insights .swiper {
-    width: 100%;
-    /* fixed width */
-    margin: 0 auto;
-    /* center in parent */
+  width: 100%;
+  /* fixed width */
+  margin: 0 auto;
+  /* center in parent */
 }
 
 .hero-insights-content {
-    text-align: center;
-    font-size: 18px;
-    width: 100% !important;
+  text-align: center;
+  font-size: 18px;
+  width: 100% !important;
 }
 
 #insights .box-content {
-    width: 100%;
-    text-align: left;
+  width: 100%;
+  text-align: left;
 }
-
 
 /* Swiper pagination colors */
 #insights .swiper-pagination-bullet {
-    background: white;
-    opacity: 1;
+  background: white;
+  opacity: 1;
 }
 
 #insights .swiper-pagination-bullet-active {
-    background: var(--black);
+  background: var(--black);
 }
 
-
 .read-more-link {
-    display: inline-block;
-    margin-top: 1em;
-    font-size: 14px;
-    color: #fff;
-    text-decoration: underline;
-    transition: color 0.3s ease;
+  display: inline-block;
+  margin-top: 1em;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
 .read-more-link:hover {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
-
 .tree-insight {
-    position: absolute;
-    top: 4vw;
-    right: 18vw;
-    width: 22vw;
+  position: absolute;
+  top: 4vw;
+  right: 18vw;
+  width: 22vw;
 }
 
 .blog-small-image {
-    width: 100px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 20px;
-    margin-left: 10px;
-    box-shadow: 0 0px 20px rgb(0 0 0 / 40%);
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-left: 10px;
+  box-shadow: 0 0px 20px rgb(0 0 0 / 40%);
 }
 
-
 .sideBar h4 {
-    color: var(--secondary);
-    font-family: "Lato-bold";
+  color: var(--secondary);
+  font-family: "Lato-bold";
 }
 
 .sideBar p {
-    font-size: 15px;
+  font-size: 15px;
 }
 
-
-
 #insights .card {
-    border: none;
-    /* remove default card border */
-    border-bottom: 1px solid #ddd;
-    /* light bottom border */
-    padding-bottom: 1rem;
+  border: none;
+  /* remove default card border */
+  border-bottom: 1px solid #ddd;
+  /* light bottom border */
+  padding-bottom: 1rem;
 }
 
 #insights .card-header h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 #insights .share-icons span:hover {
-    color: #0d6efd;
-    /* blue hover effect */
+  color: #0d6efd;
+  /* blue hover effect */
 }
 
 #insights .cursor-pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
-
-
 
 /* #testimonials {
     height: 100vh;
 } */
 
-
 #circular {
-    position: absolute;
-    width: 100%;
-    top: 62px;
+  position: absolute;
+  width: 100%;
+  top: 62px;
 }
 
-
 #circular #infinity-logo-transparent {
-    width: 25vw;
+  width: 25vw;
 }
 
 #testimonials .left-side h1 {
-    font-size: clamp(1.8rem, 5vw, 5rem);
+  font-size: clamp(1.8rem, 5vw, 5rem);
 }
 
 #testimonials .left-side p {
-    width: 50%;
+  width: 50%;
 }
-
 
 #testimonials .left-side img {
-    width: 70%;
-    opacity: 85%;
-
+  width: 70%;
+  opacity: 85%;
 }
 
-
 .testimonial1 {
-    top: -36vh;
-    right: 8vw;
-    background: var(--primary);
-    backdrop-filter: blur(10px);
-    max-width: 325px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
-    text-align: center;
-    z-index: 1;
-    border-radius: 6rem;
+  top: -36vh;
+  right: 8vw;
+  background: var(--primary);
+  backdrop-filter: blur(10px);
+  max-width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
+  text-align: center;
+  z-index: 1;
+  border-radius: 7rem;
+  padding: 20px !important;
 }
 
 .testimonial1 img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-top: -100px;
-
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-top: -70px;
 }
 
 .testimonial1 p {
-    font-size: 15px;
+  font-size: 15px;
 }
-
-
 
 .testimonial2 {
-    top: -10vh;
-    right: 66vh;
-    background: #83c065a8;
-    backdrop-filter: blur(10px);
-    max-width: 280px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
-    text-align: center;
-    z-index: 1;
-    border-radius: 5rem;
+  top: -10vh;
+  right: 66vh;
+  background: #83c065a8;
+  backdrop-filter: blur(10px);
+  max-width: 280px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
+  text-align: center;
+  z-index: 1;
+  border-radius: 5rem;
 }
 
-
 .testimonial2 img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    margin-top: -40px;
-
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-top: -40px;
 }
 
 .testimonial2 p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .testimonial3 {
-    top: 13vh;
-    right: 13vh;
-    background: #99d1f063;
-    backdrop-filter: blur(10px);
-    max-width: 250px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
-    text-align: center;
-    z-index: 1;
-    border-radius: 5rem;
+  top: 13vh;
+  right: 13vh;
+  background: #99d1f063;
+  backdrop-filter: blur(10px);
+  max-width: 280px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
+  text-align: center;
+  z-index: 1;
+  border-radius: 5rem;
 }
 
-
 .testimonial3 img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    margin-top: -40px;
-
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-top: -40px;
 }
 
 .testimonial3 p {
-    font-size: 11px;
+  font-size: 11px;
 }
-
-
 
 .testimonial4 {
-    top: 23vh;
-    right: -22vh;
-    background: #99d1f063;
-    backdrop-filter: blur(10px);
-    max-width: 250px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
-    text-align: center;
-    z-index: 1;
-    border-radius: 5rem;
+  top: 23vh;
+  right: -22vh;
+  background: #99d1f063;
+  backdrop-filter: blur(10px);
+  max-width: 250px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
+  text-align: center;
+  z-index: 1;
+  border-radius: 5rem;
 }
 
-
 .testimonial4 img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    margin-top: -40px;
-
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-top: -40px;
 }
 
 .testimonial4 p {
-    font-size: 11px;
+  font-size: 11px;
 }
 
+@media (min-width: 1921px) {
+  #insights .d-letter::after {
+    left: -3.5vw;
+    top: -10vh;
+  }
+  .right-side-content h5 {
+    font-size: 30px !important;
+  }
+  .right-side-content p {
+    font-size: 17px !important;
+  }
+  .tree-insight {
+    top: 2vw;
+  }
+  #circular #infinity-logo-transparent {
+    width: 20vw;
+  }
+}
 
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .hero-insight {
+    padding: 1em 7em;
+  }
+  #insights .hero-insight #about-title {
+    font-size: 3vw;
+  }
+  #insights .edenText-subtext {
+    font-size: 0.7rem;
+  }
+  .h-70vh {
+    height: 55vh;
+  }
 
+  #insights .w-letter::after {
+    width: 16px;
+    height: 16px;
+    left: 1vw;
+    bottom: -0.5vw;
+  }
+
+  #insights .d-letter::before {
+    left: 2vw;
+  }
+  #insights .d-letter::after {
+    left: -4.5vw;
+    top: -8vh;
+    width: 14vw;
+    height: 3rem;
+  }
+  #insights .a-letter::before {
+    top: 1vw;
+  }
+  .right-side-content h5 {
+    font-size: 30px !important;
+  }
+  .right-side-content p {
+    font-size: 17px !important;
+  }
+  .tree-insight {
+    top: 0;
+  }
+  #circular #infinity-logo-transparent {
+    width: 25vw;
+    right: 15vw;
+  }
+  .testimonial1 {
+    top: -24vw;
+    right: 3vw;
+  }
+
+  .testimonial2 {
+    top: -5vw;
+    right: 35vw;
+  }
+  .testimonial3 {
+    top: 7vw;
+    right: 8vw;
+  }
+  .testimonial4 {
+    top: 7vw;
+    right: 5vw;
+  }
+  .testimonial1 img {
+    margin-top: -70px;
+  }
+}
 
 @media (min-width: 1201px) and (max-width: 1440px) {
+  .hero-insight {
+    padding: 1em 7em;
+  }
+  #insights .hero-insight #about-title {
+    font-size: 3vw;
+  }
+  #insights-header {
+    width: 90%;
+  }
 
+  .h-70vh {
+    height: 55vh;
+  }
 
-    .testimonial1 {
-        top: -22vw !important;
-    }
+  #insights .w-letter::after {
+    width: 16px;
+    height: 16px;
+    left: 1vw;
+    bottom: -0.5vw;
+  }
 
-    #insights .w-letter::after,
-    #insights .a-letter::before {
-        width: 14px;
-        height: 14px;
-    }
+  #insights .a-letter::before {
+    top: 1vw;
+  }
+  .testimonial1 {
+    top: -28vw !important;
+  }
 
-    #insights .d-letter::before {
-        width: 14px;
-        height: 14px;
-        left: 2.3vw;
-        top: 0px;
-    }
+  #insights .w-letter::after,
+  #insights .a-letter::before {
+    width: 14px;
+    height: 14px;
+  }
 
-    #insights .d-letter::after {
-        left: -3.5vw;
-        top: -4vw;
-    }
+  .btn-hero {
+    margin-top: 0px !important;
+  }
+  #insights .box-content {
+    margin-top: 0 !important;
+  }
+  #insights .d-letter::before {
+    width: 14px;
+    height: 14px;
+    left: 2vw;
+    top: 0px;
+  }
 
-    #testimonials .left-side p {
-        width: 55% !important;
-    }
+  #insights .d-letter::after {
+    left: -4vw;
+    top: -4vw;
+  }
 
-    #insights .edenText-subtext {
-        font-size: 1vw !important;
-    }
+  #testimonials .left-side p {
+    width: 55% !important;
+  }
 
-    .tree-insight {
-        width: 26vw !important;
-    }
+  #insights .edenText-subtext {
+    font-size: 0.7vw !important;
+  }
 
-    #circular #infinity-logo-transparent {
-        bottom: -22vw;
-        right: 18vw;
-    }
+  .tree-insight {
+    width: 20vw !important;
+    top: 2vw;
+    right: 22vw;
+  }
+  .testimonial4 {
+    top: 31vh;
+    right: -38vh;
+  }
 
+  #circular #infinity-logo-transparent {
+    bottom: -22vw;
+    right: 18vw;
+  }
 
-    .testimonial2 img {
-        margin-top: -53px !important;
-    }
+  .testimonial2 img {
+    margin-top: -53px !important;
+  }
 
-    .testimonial2 {
-        right: 35vw !important;
-        top: 0 !important;
-    }
+  .testimonial2 {
+    right: 35vw !important;
+    top: 0 !important;
+  }
 
-    .testimonial3 {
-        top: 17vh !important;
-    }
+  .testimonial3 {
+    top: 24vh !important;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+  .h-70vh {
+    height: 50vh;
+  }
 
-    .h-70vh {
-        height: 40vh;
-    }
+  .sideBar p {
+    font-size: 12px !important;
+  }
 
-    .hero-insight {
-        padding: 2em 5em !important;
-        bottom: 10vw !important;
-    }
+  #insights .w-letter::after,
+  #insights .a-letter::before {
+    width: 14px;
+    height: 14px;
+  }
 
-    #hero-blog {
-        min-height: 85vh;
-    }
+  #insights .w-letter::after {
+    width: 14px;
+    height: 14px;
+    left: 0.7vw;
+    bottom: -0.5vw;
+  }
 
+  #insights .a-letter::before {
+    left: 1vw;
+    top: 0.7vw;
+  }
 
-    .top-curve {
-        position: relative;
-        overflow: hidden;
-        height: 65vh !important;
-    }
+  #insights .d-letter::before {
+    width: 14px;
+    height: 14px;
+    left: 1.7vw;
+    top: -3px;
+  }
 
-    .sideBar p {
-        font-size: 12px !important;
-    }
+  #insights .d-letter::after {
+    left: -4.5vw;
+    top: -4.5vw;
+    width: 14vw;
+    height: 4vw;
+  }
 
-    #insights .w-letter::after,
-    #insights .a-letter::before {
-        width: 14px;
-        height: 14px;
-    }
+  #insights-header {
+    width: 95%;
+  }
 
-    #insights .a-letter::before {
-        left: 1vw;
-        top: 1.2vw;
-    }
+  #insights-header #header .navItem {
+    font-size: 1.2vw !important;
+    width: 7.5vw !important;
+  }
+  #testimonials .left-side p {
+    width: 85% !important;
+  }
 
-    #insights .d-letter::before {
-        width: 14px;
-        height: 14px;
-        left: 2.3vw;
-        top: -3px;
-    }
+  #insights .edenText-subtext {
+    font-size: 0.8vw !important;
+    margin-right: 10px !important;
+  }
 
+  .tree-insight {
+    width: 24vw !important;
+    right: 22vw;
+  }
 
-    #insights .d-letter::after {
-        left: -3.5vw;
-        top: -4.5vw;
-        width: 14vw;
-        height: 4vw;
-    }
+  #circular #infinity-logo-transparent {
+    bottom: -20vw;
+    right: 15vw;
+    width: 28vw;
+  }
 
+  .testimonial1 {
+    top: -34vw !important;
+    right: 1vw;
+    max-width: 320px;
+    padding: 10px !important;
+    border-radius: 6rem;
+  }
+  .testimonial1 img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-top: -48px;
+  }
 
-    #insights-header {
-        width: 95%;
-    }
+  .testimonial2 {
+    right: 35vw !important;
+    top: 5vh !important;
+    max-width: 265px;
+    border-radius: 4rem;
+  }
 
+  .testimonial3 {
+    right: -2vh !important;
+    top: 20vh !important;
+  }
 
-    #insights-header #header .navItem {
-        font-size: 1.2vw !important;
-        width: 7.5vw !important;
-    }
+  .testimonial4 {
+    right: -45vh;
+  }
 
-    .webBtn {
-        font-size: 1.2vw !important;
-    }
+  #insights .hero-insight #about-title {
+    font-size: 35px;
+  }
 
-    #testimonials .left-side p {
-        width: 85% !important;
-    }
+  #testimonials h5 {
+    font-size: 1rem;
+  }
 
-    #insights .edenText-subtext {
-        font-size: 1vw !important;
-    }
+  .testimonial1 p {
+    font-size: 13px;
+  }
 
-    .tree-insight {
-        width: 30vw !important;
-    }
+  .testimonial2 p {
+    font-size: 11px !important;
+  }
 
-    #circular #infinity-logo-transparent {
-        bottom: -22vw;
-        right: 18vw;
-    }
-
-    .testimonial1 {
-        top: -27vh !important;
-        right: -2vw;
-    }
-
-    .testimonial2 {
-        right: 42vh !important;
-        top: 5vh !important;
-        max-width: 250px;
-        border-radius: 4rem;
-    }
-
-
-    .testimonial3 {
-        right: 10vh !important;
-    }
-
-    #testimonials h5 {
-        font-size: 1rem;
-    }
-
-    .testimonial1 p {
-        font-size: 13px;
-    }
-
-    .testimonial2 p {
-        font-size: 11px !important;
-    }
-
-
-    .testimonial2 img {
-        margin-top: -45px !important;
-        width: 60px !important;
-        height: 60px !important;
-    }
-
-    .testimonial3 {
-        top: 17vh !important;
-    }
+  .testimonial2 img {
+    margin-top: -45px !important;
+    width: 60px !important;
+    height: 60px !important;
+  }
 }
 
-@media (min-width: 320px) and (max-width: 575px) {
+@media (min-width: 320px) and (max-width: 991px) {
+  #insights #hero-blog {
+    min-height: 40vh !important;
+  }
 
-    #insights #hero-blog {
-        min-height: 40vh !important;
-    }
+  .mobile-menu-icon svg {
+    color: #a3dfff !important;
+  }
 
+  .h-70vh {
+    height: 40vh;
+    display: none !important;
+  }
 
-    .mobile-menu-icon svg {
-        color: #a3dfff !important;
-    }
+  .top-curve {
+    height: 20vh !important;
+  }
 
-    .h-70vh {
-        height: 40vh;
-        display: none !important;
-    }
+  .top-curve-svg {
+    display: none;
+  }
 
-    .top-curve {
-        height: 20vh !important;
-    }
+  #insights .edenText-subtext {
+    color: #fff;
+    margin-right: 0 !important;
+  }
 
-    .top-curve-svg {
-        display: none;
-    }
+  .cleanEnergy {
+    display: none;
+  }
 
-    #insights .edenText-subtext {
-        color: #fff;
-        margin-right: 0 !important;
-    }
+  .latestArticles {
+    margin: 0 !important;
+  }
 
-    .cleanEnergy {
-        display: none;
-    }
+  .sideBar {
+    padding: 0 !important;
+  }
 
-    .latestArticles {
-        margin: 0 !important;
-    }
+  .sideBar h4 {
+    margin: 1rem !important;
+  }
 
-    .sideBar {
-        padding: 0 !important;
-    }
+  .actionBlog div {
+    width: 100% !important;
+  }
 
-    .sideBar h4 {
-        margin: 1rem !important;
-    }
+  #insights .top-curve .webBtn {
+    display: none;
+  }
 
-    .actionBlog div {
-        width: 100% !important;
-    }
+  #insights .edenText-title {
+    margin-bottom: 20px;
+    color: #fff;
+  }
 
-    #insights .top-curve .webBtn {
-        display: none;
-    }
+  #insights .w-letter::after {
+    width: 10px;
+    height: 10px;
+    left: 1.4vw;
+    bottom: -6px;
+  }
 
-    #insights .edenText-title {
-        margin-bottom: 20px;
-        color: #fff;
-    }
+  #insights .a-letter::before {
+    width: 10px;
+    height: 10px;
+    left: 1.2vw;
+    top: 1vw;
+  }
 
-    #insights .w-letter::after {
-        width: 10px;
-        height: 10px;
-        left: 1.4vw;
-        bottom: -6px;
-    }
+  #insights .d-letter::before {
+    width: 10px;
+    height: 10px;
+    left: 3.4vw;
+    top: -1.3vw;
+  }
 
-    #insights .a-letter::before {
-        width: 10px;
-        height: 10px;
-        left: 1.2vw;
-        top: 1vw;
-    }
+  #insights .d-letter::after {
+    left: -14vw;
+    top: -17vw;
+  }
 
-    #insights .d-letter::before {
-        width: 10px;
-        height: 10px;
-        left: 3.4vw;
-        top: -1.3vw;
-    }
+  .hero-insight {
+    position: relative;
+    padding: 1em;
+    /* margin-top: -29vw; */
+  }
 
-    #insights .d-letter::after {
-        left: -14vw;
-        top: -17vw;
-    }
+  #insights .hero-insight #about-title {
+    font-size: 9vw;
+    margin-bottom: 4vw;
+  }
 
-    .hero-insight {
-        position: relative;
-        padding: 1em;
-        /* margin-top: -29vw; */
-    }
+  .tree-insight {
+    top: 22vw;
+    right: 2vw;
+    width: 38vw;
+  }
 
-    #insights .hero-insight #about-title {
-        font-size: 9vw;
-        margin-bottom: 4vw;
-    }
+  .actionBlog {
+    gap: 0 !important;
+  }
 
-    .tree-insight {
-        top: 22vw;
-        right: 2vw;
-        width: 38vw;
-    }
+  #testimonials .left-side p {
+    width: 100%;
+  }
 
-    .actionBlog {
-        gap: 0 !important;
-    }
+  .testimonial1,
+  .testimonial2,
+  .testimonial3,
+  .testimonial4 {
+    top: 0;
+    right: 0;
+    position: relative !important;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
 
-    #testimonials .left-side p {
-        width: 100%;
-    }
-
+  #circular {
+    position: relative;
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+  }
+  #circular #infinity-logo-transparent{
+    display: none;
+  }
 }

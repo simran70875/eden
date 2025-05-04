@@ -9,15 +9,14 @@ import "../insights.css";
 import images from "../components/theme/imagesPath";
 import Btn from "../components/other/btn";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import TestimonialsSection from "./testimonialsSection";
-
 
 const blogPosts = [
   {
@@ -132,19 +131,22 @@ const LatestblogPosts = [
   {
     id: 1,
     title: "Harnessing Solar Innovations for a Greener Future",
-    content: "Discover how the latest advancements in solar technology are driving sustainable energy solutions worldwide.",
+    content:
+      "Discover how the latest advancements in solar technology are driving sustainable energy solutions worldwide.",
     image: images.post1,
   },
   {
     id: 2,
     title: "Wind Energy Expansion Across Coastal Regions",
-    content: "New wind farms are rapidly developing across coastlines, providing clean energy to millions of homes.",
+    content:
+      "New wind farms are rapidly developing across coastlines, providing clean energy to millions of homes.",
     image: images.post2,
   },
   {
     id: 3,
     title: "Hydrogen Fuel: The Next Big Step in Clean Energy",
-    content: "Hydrogen is emerging as a key player in the clean energy transition, promising lower emissions for transportation.",
+    content:
+      "Hydrogen is emerging as a key player in the clean energy transition, promising lower emissions for transportation.",
     image: images.post3,
   },
   // {
@@ -153,18 +155,14 @@ const LatestblogPosts = [
   //   content: "Shared solar installations are helping small communities benefit from renewable energy without high upfront costs.",
   //   image: images.post2,
   // },
-
 ];
-
 
 const Insights = () => {
   return (
     <div id="insights">
       <div id="insights-header">
         <img src={images.logo} alt="logo" className="logo" />
-        <Header
-          navItemStyle={{ color: "#000" }}
-        />
+        <Header navItemStyle={{ color: "#000" }} />
       </div>
 
       <section id="hero-blog" className="img-fluid">
@@ -191,7 +189,8 @@ const Insights = () => {
                   </span>
                   <span className="eden-highlight">
                     <span className="d-wrapper">
-                      {" "}E<span className="d-letter">d</span>en.
+                      {" "}
+                      E<span className="d-letter">d</span>en.
                     </span>
                   </span>
                 </span>
@@ -211,36 +210,34 @@ const Insights = () => {
             EXPLORE THE<br></br>
             EXPERT INSIGHTS
           </div>
-          <p className="long-content mb-4">
-            PROTECTING FUTURE..
-          </p>
+          <p className="long-content mb-4 mb-md-3">PROTECTING FUTURE..</p>
 
           <img className="img-fluid tree-insight" src={images.tree_insight} />
           <div id="swiper-insights">
-            <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-              {
-                blogPosts?.map((item) => {
-                  return <SwiperSlide className="hero-insights-content p-4" key={item.id}>
-
+            <Swiper
+              pagination={true}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              {blogPosts?.map((item) => {
+                return (
+                  <SwiperSlide
+                    className="hero-insights-content p-4 p-md-2"
+                    key={item.id}
+                  >
                     <div className="box-content">
-                      <h3 className={"box-title"}>
-                        {item.title}
-                      </h3>
-                      <p className="long-content">
-                        {item.content}
-                      </p>
+                      <h3 className={"box-title"}>{item.title}</h3>
+                      <p className="long-content">{item.content}</p>
                       {/* Small Read More link */}
                       <Link to={""} className="read-more-link">
                         Read More...
                       </Link>
-
                     </div>
                   </SwiperSlide>
-                })
-              }
+                );
+              })}
             </Swiper>
           </div>
-
         </div>
       </section>
 
@@ -252,10 +249,11 @@ const Insights = () => {
           <div className="col-lg-8">
             {blogPosts.map((post) => (
               <div key={post.id} className="card mb-4 pb-4 border-bottom">
-
                 {/* Title and Subtitle */}
                 <div className="card-header bg-transparent border-0 p-0 mb-3">
-                  <h2 className="text-uppercase fw-bold text-black mb-1">{post.title}</h2>
+                  <h2 className="text-uppercase fw-bold text-black mb-1">
+                    {post.title}
+                  </h2>
                   <h6 className="text-muted small mb-2">{post.sub_title}</h6>
                 </div>
 
@@ -277,18 +275,31 @@ const Insights = () => {
                       <img
                         src={post.authorImage}
                         alt={post.author}
-                        style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover" }}
+                        style={{
+                          width: "40px",
+                          height: "40px",
+                          borderRadius: "50%",
+                          objectFit: "cover",
+                        }}
                       />
                       <div>
-                        <small className="text-muted d-block">By {post.author}</small>
+                        <small className="text-muted d-block">
+                          By {post.author}
+                        </small>
                         <small className="text-muted">{post.date}</small>
                       </div>
                     </div>
 
                     <div className="d-flex gap-1 gap-sm-3">
                       {/* Share */}
-                      <div className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm" style={{ borderColor: "#ddd" }}>
-                        <div className="pe-2 me-2 border-end d-none d-sm-block" style={{ borderColor: "#ddd" }}>
+                      <div
+                        className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm"
+                        style={{ borderColor: "#ddd" }}
+                      >
+                        <div
+                          className="pe-2 me-2 border-end d-none d-sm-block"
+                          style={{ borderColor: "#ddd" }}
+                        >
                           <FaShareAlt />
                         </div>
                         <div className="d-sm-none">
@@ -298,8 +309,14 @@ const Insights = () => {
                       </div>
 
                       {/* Facebook */}
-                      <div className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm" style={{ borderColor: "#ddd" }}>
-                        <div className="pe-2 me-2 border-end d-none d-sm-block" style={{ borderColor: "#ddd" }}>
+                      <div
+                        className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm"
+                        style={{ borderColor: "#ddd" }}
+                      >
+                        <div
+                          className="pe-2 me-2 border-end d-none d-sm-block"
+                          style={{ borderColor: "#ddd" }}
+                        >
                           <FaFacebookF />
                         </div>
                         <div className="d-sm-none">
@@ -309,8 +326,14 @@ const Insights = () => {
                       </div>
 
                       {/* Twitter */}
-                      <div className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm" style={{ borderColor: "#ddd" }}>
-                        <div className="pe-2 me-2 border-end d-none d-sm-block" style={{ borderColor: "#ddd" }}>
+                      <div
+                        className="d-flex align-items-center gap-2 px-2 px-sm-3 py-1 py-sm-2 border-0 border-sm rounded-0 rounded-sm"
+                        style={{ borderColor: "#ddd" }}
+                      >
+                        <div
+                          className="pe-2 me-2 border-end d-none d-sm-block"
+                          style={{ borderColor: "#ddd" }}
+                        >
                           <FaTwitter />
                         </div>
                         <div className="d-sm-none">
@@ -319,18 +342,14 @@ const Insights = () => {
                         <span className="d-none d-sm-inline">Twitter</span>
                       </div>
                     </div>
-
                   </div>
                 </div>
-
               </div>
             ))}
           </div>
 
-
           {/* Right Side - Blog List */}
           <div className="col-lg-4 px-md-5 px-lg-2 sideBar">
-
             {/* Clean Energy Section */}
             <section className="cleanEnergy">
               <h4 className="mb-4 mx-5 mx-lg-3">Clean Energy</h4>
@@ -355,7 +374,6 @@ const Insights = () => {
             <div className="border border-gray-300 rounded p-3 mx-5 mx-lg-3 latestArticles">
               {LatestblogPosts?.map((post) => (
                 <div key={post.id} className="mb-5">
-
                   {/* Image */}
                   <img
                     src={post.image}
@@ -375,16 +393,12 @@ const Insights = () => {
                       Read More
                     </button>
                   </div>
-
                 </div>
               ))}
             </div>
-
           </div>
-
         </div>
       </div>
-
 
       <div className="container-fluid px-3 px-sm-4 px-md-5 py-4 py-md-5">
         <div className="row g-4">
@@ -398,44 +412,52 @@ const Insights = () => {
           </div>
 
           {/* Right Side Content */}
-          <div className="col-md-8 px-2 px-sm-3 py-2 py-sm-3 px-md-2 d-flex flex-column justify-content-between">
+          <div className="col-md-8 px-2 px-lg-5 px-sm-3 py-2 py-sm-3 px-md-2 d-flex flex-column justify-content-between right-side-content">
             <div>
               {/* Main Title */}
-              <h1 className="fw-bold text-uppercase mb-4 mb-md-3 fs-4 fs-md-2">
+              <h1 className="fw-bold text-uppercase mb-4 mb-lg-5 mb-md-3 fs-1 fs-md-2 fs-lg-1">
                 TAKE ACTION FOR A SUSTAINABLE TOMORROW
               </h1>
 
               {/* Grid of 4 Points */}
-              <div className="row g-4 g-md-3">
+              <div className="row g-md-4 g-lg-5 g-md-3">
                 {/* Point 1 */}
-                <div className="col-sm-12 col-md-6 col-lg-5">
+                <div className="col-sm-12 col-md-6">
                   <h5 className="fw-bold text-secondary">Pollution of Soil</h5>
                   <p className="text-muted small">
-                    Waste can leak hazardous chemicals into the soil and from there into our food.
+                    Waste can leak hazardous chemicals into the soil and from
+                    there into our food.
                   </p>
                 </div>
 
                 {/* Point 2 */}
-                <div className="col-sm-12 col-md-6 col-lg-5">
-                  <h5 className="fw-bold text-secondary">Water Contamination</h5>
+                <div className="col-sm-12 col-md-6">
+                  <h5 className="fw-bold text-secondary">
+                    Water Contamination
+                  </h5>
                   <p className="text-muted small">
-                    Dumped waste materials often seep into water bodies, harming marine life and ecosystems.
+                    Dumped waste materials often seep into water bodies, harming
+                    marine life and ecosystems.
                   </p>
                 </div>
 
                 {/* Point 3 */}
-                <div className="col-sm-12 col-md-6 col-lg-5">
-                  <h5 className="fw-bold text-secondary">Air Quality Degradation</h5>
+                <div className="col-sm-12 col-md-6">
+                  <h5 className="fw-bold text-secondary">
+                    Air Quality Degradation
+                  </h5>
                   <p className="text-muted small">
-                    Burning of waste releases harmful pollutants that degrade air quality and public health.
+                    Burning of waste releases harmful pollutants that degrade
+                    air quality and public health.
                   </p>
                 </div>
 
                 {/* Point 4 */}
-                <div className="col-sm-12 col-md-6 col-lg-5">
+                <div className="col-sm-12 col-md-6">
                   <h5 className="fw-bold text-secondary">Wildlife Threats</h5>
                   <p className="text-muted small">
-                    Improper waste management disrupts wildlife habitats, leading to biodiversity loss.
+                    Improper waste management disrupts wildlife habitats,
+                    leading to biodiversity loss.
                   </p>
                 </div>
               </div>
@@ -449,9 +471,7 @@ const Insights = () => {
         </div>
       </div>
 
-
       <TestimonialsSection />
-
 
       <Brands style={{ padding: "15rem 0 0" }} />
       <Footer />

@@ -3,16 +3,10 @@ import images from '../theme/imagesPath';
 
 const Features = () => {
     const featuresData = [
-        { title: 80, content: "Suppliers Engaged", img: images.feature1 },
-        { title: 80, content: "Suppliers Engaged", img: images.feature2 },
-        { title: 80, content: "Suppliers Engaged", img: images.feature3 },
-        { title: 80, content: "Suppliers Engaged", img: images.feature4 },
-        { title: 80, content: "Suppliers Engaged", img: images.feature5 },
-        { title: 80, content: "Suppliers Engaged", img: images.feature1 },
-        { title: 80, content: "Suppliers Engaged", img: images.feature2 },
-        { title: 80, content: "Suppliers Engaged", img: images.feature3 },
-        { title: 80, content: "Suppliers Engaged", img: images.feature4 },
-        { title: 80, content: "Suppliers Engaged", img: images.feature5 },
+        { title: 84, content: "Suppliers Engaged", img: images.feature1 },
+        { title: 67, content: "Fixed Products", img: images.feature2 },
+        { title: 97, content: "Retention", img: images.feature3 },
+        { title: 98, content: "Satisfaction", img: images.feature4 },
     ];
 
     return (

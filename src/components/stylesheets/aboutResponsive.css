@@ -1,153 +1,342 @@
 /* Small Mobile (up to iPhone SE) */
 @media (max-width: 320px) {
-    #hero-about {
-        height: 35vh;
-    }
+  #hero-about {
+    height: 35vh;
+  }
 
+  .hero-overlay {
+    height: 65vh;
+  }
 
-    .hero-overlay {
-        height: 65vh;
-    }
+  .written-img img {
+    width: 100%;
+  }
 
-    .written-img img {
-        width: 100%;
-    }
+  .lines-img {
+    position: absolute !important;
+    top: 0;
+    opacity: 0.2;
+  }
 
-    .lines-img {
-        position: absolute !important;
-        top: 0;
-        opacity: 0.2;
-    }
+  .lines-img img {
+    position: absolute;
+    right: 0;
+    height: 65vh;
+  }
 
-    .lines-img img {
-        position: absolute;
-        right: 0;
-        height: 65vh;
-    }
+  /* about */
 
-    /* about */
+  #about-page-content .title {
+    font-size: 25px;
+  }
 
-    #about-page-content .title {
-        font-size: 25px;
-    }
+  #about-page-content .founder {
+    width: 100%;
+    height: auto;
+  }
 
-    #about-page-content .founder {
-        width: 100%;
-        height: auto;
-    }
-
-    #about-page-content .person-info .name,
-    .person-info-round .name {
-        font-size: 5vw;
-    }
+  #about-page-content .person-info .name,
+  .person-info-round .name {
+    font-size: 5vw;
+  }
 }
 
 /* Mobile Portrait */
 @media (min-width: 321px) and (max-width: 480px) {
-    #about-page-content .title {
-        font-size: 25px;
-    }
+  #about-page-content .title {
+    font-size: 25px;
+  }
 
-    #hero-about {
-        height: 35vh;
-    }
+  #hero-about {
+    height: 35vh;
+  }
 
-    .hero-overlay {
-        height: 65vh;
-    }
+  .hero-overlay {
+    height: 65vh;
+  }
 
-    .written-img img {
-        width: 100%;
-    }
+  .written-img img {
+    width: 100%;
+  }
 
-    .lines-img {
-        position: absolute !important;
-        top: 0;
-        opacity: 0.2;
-    }
+  .lines-img {
+    position: absolute !important;
+    top: 0;
+    opacity: 0.2;
+  }
 
-    .lines-img img {
-        position: absolute;
-        right: 0;
-        height: 65vh;
-    }
+  .lines-img img {
+    position: absolute;
+    right: 0;
+    height: 65vh;
+  }
 }
 
 /* Mobile Landscape / Larger Phones */
 @media (min-width: 481px) and (max-width: 767px) {
-    #hero-about {
-        height: 45vh;
-    }
+  #hero-about {
+    height: 45vh;
+  }
 
-    .hero-overlay {
-        height: 65vh;
-    }
+  .hero-overlay {
+    height: 65vh;
+  }
 
-    .written-img img {
-        width: 90%;
-    }
+  .written-img img {
+    width: 90%;
+  }
 
-    .lines-img {
-        position: absolute !important;
-        top: 0;
-        opacity: 0.2;
-    }
+  .lines-img {
+    position: absolute !important;
+    top: 0;
+    opacity: 0.2;
+  }
 
-    .lines-img img {
-        position: absolute;
-        right: 0;
-        height: 65vh;
-    }
-
+  .lines-img img {
+    position: absolute;
+    right: 0;
+    height: 65vh;
+  }
 }
-
 
 /* Small Tablets / Large Phones (Portrait) */
 @media (min-width: 768px) and (max-width: 991px) {
-    #hero-about {
-        height: 50vh;
-        position: relative;
-    }
+  #hero-about {
+    height: 50vh;
+    position: relative;
+  }
 
-    .lines-img img {
-        height: 60vh;
-    }
+  .lines-img img {
+    height: 60vh;
+  }
 
-    .hero-overlay {
-        height: 60vh;
-    }
+  .hero-overlay {
+    height: 60vh;
+  }
 
-    .written-img img {
-        width: 100%;
-    }
+  .written-img img {
+    width: 100%;
+  }
 }
 
 /* Large Tablets (Landscape) */
-@media (min-width: 992px) and (max-width: 1199px) {
-    #hero-about {
-        height: 60vh;
-        position: relative;
-    }
+@media (min-width: 992px) and (max-width: 1200px) {
+  #hero-about {
+    height: 60vh;
+    position: relative;
+  }
 
-    .lines-img img {
-        height: 70vh;
-    }
+  .lines-img img {
+    height: 70vh;
+  }
 
-    .hero-overlay {
-        height: 70vh;
-    }
+  .hero-overlay {
+    height: 70vh;
+  }
+  #about-page-content .title {
+    font-size: 23px;
+  }
+  #csr .content-width {
+    width: 55%;
+    margin-left: 5vw;
+  }
+  .title2 {
+    font-size: 50px !important;
+    margin-top: -2vw;
+  }
+  #csr .title {
+    font-size: 55px;
+  }
+  #posts {
+    padding-top: 10rem;
+  }
+  .posts-swiper .post-description {
+    font-size: 1vw;
+  }
+  #vision {
+    margin-top: 35vh;
+  }
+  .tree {
+    top: -16vw;
+    width: 36vw;
+  }
+  #about-page-content .founder {
+    width: 40vw;
+  }
+  #features2 .supplier-card {
+    width: 185px;
+    height: 98px;
+  }
+  #features2 {
+    right: 6vw;
+  }
+  #features2 .supplier-label {
+    font-size: 12px;
+  }
+
+  #video-section {
+    height: 60vw;
+    width: 60vw;
+    position: absolute;
+    right: 12vw;
+    top: 125.4vh;
+
+  }
 }
 
 /* Small Desktop */
-@media (min-width: 1200px) and (max-width: 1439px) {}
+@media (min-width: 1201px) and (max-width: 1440px) {
+  #about-header {
+    width: 90%;
+  }
+  #about-page-content .founder {
+    width: 40vw;
+  }
+  #about-page-content .title {
+    font-size: 35px;
+  }
+  #features2 {
+    right: 5vw;
+  }
+  #features3 {
+    height: 50vh;
+    width: 37%;
+    left: 45vw;
+  }
+  #video-section {
+    height: 50vw;
+    width: 50vw;
+    right: 13vw;
+  }
+  #about-page-content .person-info .name {
+    margin-top: 5px;
+  }
+  #partnership {
+    height: 100vh;
+  }
+  #partnership .circle {
+    width: 53%;
+    height: 120vh;
+    right: -4vh;
+    top: -20vh;
+  }
+  #csr {
+    height: 100vh;
+  }
+  #csr .content-width {
+    width: 50%;
+    margin-left: 5vw;
+  }
+  #csr .circle {
+    height: 150vh;
+  }
+  .title2 {
+    font-size: 75px !important;
+    margin-top: 1vw;
+  }
+  .leaf2 {
+    bottom: 3vw;
+    width: 17vw;
+  }
+
+  #vision {
+    margin-top: 60vh;
+  }
+  .tree {
+    top: -16vw;
+    width: 36vw;
+  }
+}
 
 /* Standard Desktop */
-@media (min-width: 1440px) and (max-width: 1920px) {}
+@media (min-width: 1441px) and (max-width: 1700px) {
+  #about-page-content .title {
+    font-size: 35px;
+  }
+  #features3 {
+    height: 55vh;
+    width: 31%;
+    left: 46vw;
+  }
+  #video-section {
+    height: 50vw;
+    width: 50vw;
+    right: 15vw;
+  }
+  #about-page-content .person-info .name {
+    margin-top: 5px;
+  }
+  #partnership {
+    height: 100vh;
+    margin-top: 28vh;
+  }
+  #partnership .circle {
+    width: 53%;
+    height: 120vh;
+    right: -4vh;
+    top: -20vh;
+  }
+  #csr {
+    height: 100vh;
+  }
+  #csr .content-width {
+    width: 40%;
+  }
+  #csr .circle {
+    height: 150vh;
+  }
+  .title2 {
+    font-size: 80px !important;
+    margin-top: 3vw;
+  }
+  .leaf2 {
+    bottom: 3vw;
+    width: 17vw;
+  }
+
+  #vision {
+    margin-top: 60vh;
+  }
+  .tree {
+    top: -16vw;
+    width: 36vw;
+  }
+}
 
 /* Large / 4K Screens */
-@media (min-width: 1921px) {}
+@media (min-width: 1701px) and (max-width: 1921px) {
+  #features3 {
+    height: 40vh;
+  }
+  #partnership {
+    height: 100vh;
+    margin-top: 17.7vh;
+    height: 120vh;
+  }
+  #partnership .circle {
+    top: -22vh;
+    right: -3.4vw;
+    width: 55%;
+    height: 142vh;
+  }
+  #csr {
+    height: 100vh;
+  }
+  #csr .circle {
+    height: 135vh;
+  }
 
-
+  .leaf2 {
+    bottom: 6vw;
+    width: 18vw;
+  }
+  #vision {
+    margin-top: 20vh;
+  }
+  .tree {
+    top: -14vw;
+  }
+}
 
 /* Extra Small: <576px
 @media (max-width: 575.98px) {}

@@ -45,12 +45,12 @@
 .modal-blur {
   background-color: rgb(234 234 234 / 81%);
   backdrop-filter: blur(13px) !important;
+  padding: 10px;
 }
 
 .model-header-title-width {
   width: 60%;
 }
-
 
 .image-checkbox-label {
   display: flex;
@@ -79,16 +79,14 @@
 }
 
 .checkbox-image.checked {
-  background-image: url('../../assets/insights/check.png');
+  background-image: url("../../assets/insights/check.png");
   background-color: #fff0;
   border-color: #fff0;
 }
 
-
 .form-height-modal {
   height: 100%;
   overflow-y: scroll;
-
 }
 
 .text-vertical-box {
@@ -110,7 +108,6 @@
   margin-top: 1rem;
 }
 
-
 .contact-backdrop .form-height-modal .connect .box-title {
   margin-bottom: 0 !important;
 }
@@ -120,14 +117,11 @@
   color: var(--titleColor);
 }
 
-
 .contact-time-text {
   color: var(--textColor);
   font-weight: 600;
   font-size: 1rem;
 }
-
-
 
 /* Removes outer border and makes it full width */
 .custom-datepicker {
@@ -136,14 +130,12 @@
   background-color: transparent !important;
 }
 
-
 .custom-datepicker .react-datepicker__day-name,
 .react-datepicker__day,
 .react-datepicker__time-name {
   width: 3vw !important;
   line-height: 2.7vw !important;
 }
-
 
 .custom-datepicker .react-datepicker__navigation--previous {
   /* background-color: var(--primary) !important; */
@@ -154,7 +146,10 @@
   left: 5vw !important;
 }
 
-.custom-datepicker .react-datepicker__navigation--next--with-time:not(.react-datepicker__navigation--next--with-today-button) {
+.custom-datepicker
+  .react-datepicker__navigation--next--with-time:not(
+    .react-datepicker__navigation--next--with-today-button
+  ) {
   right: 17vw !important;
 }
 
@@ -163,7 +158,6 @@
   justify-content: center !important;
   align-items: center !important;
 }
-
 
 .custom-datepicker .react-datepicker__navigation-icon {
   left: 0 !important;
@@ -188,7 +182,6 @@
   color: #000;
   padding-bottom: 10px;
 }
-
 
 /* Style each time slot */
 .custom-datepicker .react-datepicker__time-list-item {
@@ -220,33 +213,34 @@
   background-color: #f0f8ff;
 }
 
-
 .custom-datepicker .react-datepicker__time-container {
   border: none !important;
   width: 145px !important;
 }
-
-
 
 .custom-datepicker .react-datepicker__month-container {
   float: left;
   width: 70% !important;
 }
 
-
-.custom-datepicker .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {
+.custom-datepicker
+  .react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box {
   width: 150px;
 }
 
-
-.custom-datepicker .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list {
+.custom-datepicker
+  .react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box
+  ul.react-datepicker__time-list {
   height: 340px !important;
 }
 
 .custom-datepicker .react-datepicker__time-container .react-datepicker__time {
   background-color: transparent !important;
 }
-
 
 #contact-selected-slot-details .contact-time-text {
   font-weight: 500;
@@ -257,14 +251,12 @@
   font-size: 0.7rem;
 }
 
-
 .clockIcon,
 .calendarIcon,
 .globalIcon,
 .videoIcon {
   font-size: 1vw;
 }
-
 
 .form-check-input {
   accent-color: #0d6efd;
@@ -275,7 +267,6 @@ textarea.form-control {
   resize: vertical;
   border-radius: 8px;
 }
-
 
 .success-messege {
   width: 60%;
@@ -303,8 +294,37 @@ textarea.form-control {
 }
 
 @media (min-width: 1441px) and (max-width: 1920px) {
-  .contact-time-text {
+  #contact-selected-slot-details .contact-time-text {
     font-size: 0.8rem;
+  }
+  .contact-backdrop .form-label, .contact-backdrop .form-control,.contact-backdrop .form-check-label{
+    font-size: 0.8rem;
+  }
+  .input-box{
+    margin-top: 10px !important;
+  }
+  .image-checkbox-label {
+    gap: 10px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .checkbox-image {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #555;
+  }
+  .custom-datepicker .react-datepicker__time-list-item {
+    font-size: 13px !important;
+    width: 148px !important;
+    margin-bottom: 3px !important;
+    height: 27px !important;
+  }
+  
+  .modal-body{
+    padding: 0 !important;
+  }
+  .custom-datepicker .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+    margin: 0 !important;
   }
 }
 
@@ -325,7 +345,6 @@ textarea.form-control {
   }
 }
 
-
 @media (min-width: 768px) and (max-width: 1280px) {
   .modal-dialog.modal-dialog-centered.modal-fullscreen {
     width: 100% !important;
@@ -344,7 +363,7 @@ textarea.form-control {
   }
 
   .contact-backdrop label.form-label.text-dark {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
 
   .contact-backdrop .form-control {
@@ -364,7 +383,10 @@ textarea.form-control {
     font-size: 2vw;
   }
 
-  .custom-datepicker .react-datepicker__navigation--next--with-time:not(.react-datepicker__navigation--next--with-today-button) {
+  .custom-datepicker
+    .react-datepicker__navigation--next--with-time:not(
+      .react-datepicker__navigation--next--with-today-button
+    ) {
     right: 3vw !important;
   }
 
@@ -384,11 +406,9 @@ textarea.form-control {
     font-size: 1.1vw;
   }
 
-
   .calendarIcon {
     font-size: 25px;
   }
-
 
   .text-vertical-box {
     justify-content: start;
@@ -399,9 +419,7 @@ textarea.form-control {
   }
 }
 
-
 @media (min-width: 320px) and (max-width: 768px) {
-
   .form-height-modal {
     padding-bottom: 10px;
   }
@@ -462,7 +480,6 @@ textarea.form-control {
     height: 6vw;
   }
 
-
   .contact-backdrop .form-height-modal .connect .long-content {
     font-size: 3.8vw;
   }
@@ -478,7 +495,10 @@ textarea.form-control {
     width: 100% !important;
   }
 
-  .custom-datepicker .react-datepicker__navigation--next--with-time:not(.react-datepicker__navigation--next--with-today-button) {
+  .custom-datepicker
+    .react-datepicker__navigation--next--with-time:not(
+      .react-datepicker__navigation--next--with-today-button
+    ) {
     right: 3vw !important;
   }
 
@@ -491,7 +511,6 @@ textarea.form-control {
     width: 100%;
     margin-bottom: 4vw;
   }
-
 
   svg.videoIcon2 {
     font-size: 6vw;
