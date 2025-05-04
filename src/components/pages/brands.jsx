@@ -27,12 +27,12 @@ const Brands = ({ btn, style }) => {
     });
 
     tl.from("#brands .child-brand-title > span", {
-        x: 100,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-      });
+      x: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power3.out",
+    });
 
     // Optional: Animate logos afterwards
     tl.from(
@@ -58,7 +58,7 @@ const Brands = ({ btn, style }) => {
                 word === "EDEN" ? "eden-highlight" : ""
               }`}
             >
-              <span>{word}{" "}</span>
+              <span>{word} </span>
             </span>
           </span>
         ))}
